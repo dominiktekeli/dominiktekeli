@@ -26,7 +26,10 @@ TableWatch respektuje soukromí uživatelů a neukládá žádné osobní údaje
 
 Pro přístup k aplikaci a využití všech funkcí je vyžadována registrace.
 
+Moje vize projektu je ve složce: FOTKY, kde naleznete různé návrhy aplikace.
+
 Zakazník jakmile si sedne, tak na židli bude upevněný váhový senzor, který bude připojen na ESP32.
+Senzor by byl nejspíše připojen v bobku židle, aby nebyl vidět.
 Aplikace funguje na ESP32, který je připojený na firebase databázi aby se uložilo přihlašení od zakazníka.
 To nám v aplikaci umožní vidět stoly, kde zakazníci sedí nebo ne.
 Pokud bude místo volné, člověk může jen kliknout a bude mít rezervaci.
@@ -35,6 +38,9 @@ Jediný problém s aplikací při vývoji byl FIREBASE od Google.
 Udělal jsem webovou aplikaci a databázi.
 Napsal jsem kód, tak aby se do aplikace přihlasil člověk jen Jménem a E-mailem viz. prihlaseni.watchtable.html ve složce.
 V databázi se ale nic neukazuje, což nechápu, jelikož jsem tam dával kód na propojení Databáze se stránkou.
+Myslím si, že problém bude někde v připojení, ale opravdu netuším.
+Zkoušel jsem instalovat firebase-tools z gifthubu, ale bylo to zbytečné.
+Myslím si, že pokud tomu, někdo rozumí nebude mít asi problém to napojit.
 
 Na vývoj aplikace byl použit hlavně youtube pro informace a Gifthub.
 Inspiroval jsem se od webu: https://community.home-assistant.io/t/diy-zigbee-bed-chair-occupancy-sensor/239517
