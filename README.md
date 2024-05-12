@@ -26,10 +26,22 @@ TableWatch respektuje soukromí uživatelů a neukládá žádné osobní údaje
 
 Pro přístup k aplikaci a využití všech funkcí je vyžadována registrace.
 
+Zakazník jakmile si sedne, tak na židli bude upevněný váhový senzor, který bude připojen na ESP32.
 Aplikace funguje na ESP32, který je připojený na firebase databázi aby se uložilo přihlašení od zakazníka.
+To nám v aplikaci umožní vidět stoly, kde zakazníci sedí nebo ne.
+Pokud bude místo volné, člověk může jen kliknout a bude mít rezervaci.
 
 Na vývoj aplikace byl použit hlavně youtube pro informace a Gifthub.
 Inspiroval jsem se od webu: https://community.home-assistant.io/t/diy-zigbee-bed-chair-occupancy-sensor/239517
+
+Člověk se přihlasí do aplikace, kde si bude moct vybrat restauraci, na kterou bude mít chuť.
+Vybere si restauraci a aplikace ho přesune na stránku, kde si bude moct vybrat stůl viz.foto STARBUCKS.jpg ve složce projektu
+Potom až si vybere stůl, musí si zarezervovat stůl a budu mít 20 minut aby přišel, jinak rezervace propadá, aby si mohl rezervovat někdo jiný, či jiný člověk v restauraci aby si mohl sednout.
+Aplikace je ve vývoji, ale potom by se mohlo přidat menu jídla/kávy pro zákazníky.
+
+Aplikaci jsem vytvářel jako originalní plán, takže najít něco podobného bylo vskutku těžké a dělat to sám bylo ještě těžší.
+
+
 
 
 Děkujeme, že používáte TableWatch! 🍽️
