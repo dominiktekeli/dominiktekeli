@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervace stolů</title>
+    <style>
+        .table {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            display: inline-block;
+            margin: 10px;
+        }
+        .occupied {
+            background-color: red;
+        }
+        .vacant {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rezervace stolů</h1>
+    <div class="table occupied">
+        <p>Stůl 1</p>
+    </div>
+    <div class="table occupied">
+        <p>Stůl 2</p>
+    </div>
+    <div class="table vacant">
+        <p>Stůl 3</p>
+    </div>
+    <div class="table vacant">
+        <p>Stůl 4</p>
+    </div>
+    <script>
+        // Připojení k MQTT brokero
+        var client = new Paho.MQTT.Client("IP_adresa_MQTT_brokera", 1883, "clientId");
+
+        // Funkce pro zpracování příchozích zpráv
+        function onMessageArrived(message) {
+            var topic = message.destinationName;
+            var payload = message.payloadString;
+
+            // Aktualizace stavu stolů na základě příchozí zprávy
+            if (topic == "misto/obsazeno") {
+                var tables = document.querySelectorAll(".table");
+                if (payload == "true") {
+                    // První dva stoly obsazené
+                    tables[0].classList.remove("vacant");
+                    tables[0].classList.add("occupied");
+                    tables[1].classList.remove("vacant");
+                    tables[1].classList.add("occupied");
+                    // Další dva stoly volné
+                    tables[2].classList.remove("occupied");
+                    tables[2].classList.add("vacant");
+                    tables[3].classList.remove("occupied");
+                    tables[3].classList.add("vacant");
+                } else {
+                    // První dva stoly volné
+                    tables[0].classList.remove("occupied");
+                    tables[0].classList.add("vacant");
+                    tables[1].classList.remove("occupied");
+                    tables[1].classList.add("vacant");
+                    // Další dva stoly volné
+                    tables[2].classList.remove("occupied");
+                    tables[2].classList.add("vacant");
+                    tables[3].classList.remove("occupied");
+                    tables[3].classList.add("vacant");
+                }
+            }
+        }
+
+        // Připojení k MQTT brokero a odběr zpráv
+        client.connect({
+            onSuccess: function () {
+                console.log("Connected to broker");
+                client.subscribe("misto/obsazeno");
+            }
+        });
+
+        // Nastavení funkce pro zpracování příchozích zpráv
+        client.onMessageArrived = onMessageArrived;
+    </script>
+</body>
+</html>
