@@ -29,6 +29,7 @@ Pro přístup k aplikaci a využití všech funkcí je vyžadována registrace.
 Aplikace funguje na ESP32, který je připojený na firebase databázi aby se uložilo přihlašení od zakazníka.
 
 Na vývoj aplikace byl použit hlavně youtube pro informace a Gifthub.
+Inspiroval jsem se od webu: https://community.home-assistant.io/t/diy-zigbee-bed-chair-occupancy-sensor/239517
 
 
 Děkujeme, že používáte TableWatch! 🍽️
