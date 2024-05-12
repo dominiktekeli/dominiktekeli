@@ -22,12 +22,13 @@ Dynamická aktualizace: Aplikace neustále sleduje stav stolů pomocí čidelů 
 
 Potvrzení rezervace: Po dokončení rezervace uživatel obdrží potvrzení o své rezervaci včetně podrobností o čase a místě.
 
-Poznámka
-
 TableWatch respektuje soukromí uživatelů a neukládá žádné osobní údaje mimo nezbytné informace pro provedení rezervace. Všechna data jsou šifrována a chráněna proti neoprávněnému přístupu.
 
 Pro přístup k aplikaci a využití všech funkcí je vyžadována registrace.
 
-Pokud máte jakékoliv dotazy nebo nápady na vylepšení, neváhejte nás kontaktovat.
+Aplikace funguje na ESP32, který je připojený na firebase databázi aby se uložilo přihlašení od zakazníka.
+
+Na vývoj aplikace byl použit hlavně youtube pro informace a Gifthub.
+
 
 Děkujeme, že používáte TableWatch! 🍽️
