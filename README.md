@@ -31,6 +31,11 @@ Aplikace funguje na ESP32, který je připojený na firebase databázi aby se ul
 To nám v aplikaci umožní vidět stoly, kde zakazníci sedí nebo ne.
 Pokud bude místo volné, člověk může jen kliknout a bude mít rezervaci.
 
+Jediný problém s aplikací při vývoji byl FIREBASE od Google.
+Udělal jsem webovou aplikaci a databázi.
+Napsal jsem kód, tak aby se do aplikace přihlasil člověk jen Jménem a E-mailem viz. prihlaseni.watchtable.html ve složce.
+V databázi se ale nic neukazuje, což nechápu, jelikož jsem tam dával kód na propojení Databáze se stránkou.
+
 Na vývoj aplikace byl použit hlavně youtube pro informace a Gifthub.
 Inspiroval jsem se od webu: https://community.home-assistant.io/t/diy-zigbee-bed-chair-occupancy-sensor/239517
 
